@@ -1,0 +1,326 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'SFProDisplay',
+    sans-serif;
+}
+header{
+    background-color: #222222;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+}
+
+header img {
+    margin-top: 25px;
+    width: 100px;
+    height: 15px;
+}
+h1{
+    text-align: center;
+}
+.container{
+    width: fit-content;
+    height: 800px;
+    margin: 50px auto;
+    margin-bottom: 0;
+}
+
+.car{
+    position: relative;
+    z-index: inherit;
+    width: 1250px;
+    height: 350px;
+    background-image: url(../img/tesla.jpg);
+    background-size: cover;
+    background-position: center;
+    /* opacity: 0; */
+}
+.salon1{
+    position: relative;
+    z-index: inherit;
+    width: 1240px;
+    height: 697px;
+    background-image: url(../img/salon.png);
+    background-size: cover;
+    background-position: center;
+    transition: 300ms ease;
+}
+.salon2{
+    width: 1240px;
+    height: 697px;
+    background-image: url(../img/salon2.png);
+    background-size: cover;
+    transition: 300ms ease;
+    background-position: center;
+}
+.salon3{
+    width: 1240px;
+    height: 697px;
+    background-image: url(../img/salon3.png);
+    background-size: cover;
+    transition: 300ms ease;
+    background-position: center;
+}
+.wheel-19{
+    width: 1250px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* display: none; */
+}
+.wheel-19 img{
+    width: 110px;
+    height: 110px;
+}
+.wheel-21{
+    width: 1250px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    display: none;
+}
+.wheel-21 img{
+    width: 110px;
+    height: 110px;
+}
+.front{
+    position: relative;
+    left: 312.5px;
+    bottom: 293px;
+    z-index: 5;
+    animation: move .38s steps(12) infinite;
+}
+.back{
+    position: relative;
+    right: 335px;
+    bottom: 293px;
+    z-index: 5;
+    animation: move .38s steps(12) infinite;
+}
+.top{
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.left-info p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #707070;
+}
+.left-info span {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 79px;
+    color: #000000;
+}
+.price p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #707070;
+}
+.price span{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 79px;
+    color: #000000; 
+}
+.bot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* display: none; */
+}
+.speed{
+    width: 220px;
+    height: 60px;
+    display: flex;
+    margin-right: 20px;
+}
+.temp{
+    width: 270px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.wheels {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+}
+.speed span {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+}
+.speed p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #707070; 
+}
+
+.up {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 100px;
+}
+.down {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 100px;
+    transform: rotate(180deg);
+}
+
+.checkbox_div {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #8E9AA7;
+    transition: 300ms ease;
+    margin-top: 10px;
+}
+
+.checkbox_input {
+    display: none;
+}
+
+.checkbox_div::before {
+    content: ' ';
+    position: absolute;
+    top: 5px;
+    left:5px;
+    width:20px;
+    height:20px;
+    border-radius: 50px;
+    background-color:white;
+    transition: 300ms ease;
+}
+
+.checkbox_input:checked ~ .checkbox_div::before {
+    left:25px;
+    transition: 300ms ease;
+}
+.checkbox_input:checked ~ .checkbox_div {
+    background-color: blue;
+    transition: 300ms ease;
+}
+.checkbox span  {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #707070;
+}
+.check{
+    width: fit-content;
+    margin-right: 20px;
+}
+
+.door{
+    position: relative;
+    z-index: inherit;
+    top: 8%;
+    left: 38%;
+    width: 185px;
+    height: 180px;
+    border-top-left-radius: 80%;
+}
+
+@keyframes move {
+    0%{
+        /* -webkit-transform: rotate(0turn); */
+        transform: rotate(0turn);
+    }
+    100%{
+        /* -webkit-transform: rotate(100turn); */
+        transform: rotate(100turn);
+    }
+}
+.always{
+    display: block;
+}
+.black{
+    background-color: black;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+.white{
+    background-color: #EFEFEF;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+.beige{
+    background-color: #E6DDD0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+.color{
+    margin-right: 20px;  
+
+}
+.color p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #707070; 
+}
+
+.bot-first{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bot-second{
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.color button{
+    margin: 2px;
+    transition: .2s ease;
+}
+
+.color button:hover{
+    border: 2px solid blue;
+}
+
+.bot_flex{
+    display: flex;
+}
+.bot_none{
+    display: none;
+}
+.wheel_flex{
+    display: flex;
+}
+.wheel_none{
+    display: none;
+}
